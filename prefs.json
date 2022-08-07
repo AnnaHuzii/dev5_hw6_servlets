@@ -1,0 +1,6 @@
+{
+  "dbUrl" :  "jdbc:mysql://localhost/mybdhw",
+  "dbUserName" :  "anna_guzii",
+  "dbPassword" :  "1984_anna",
+  "projectRoot" : "C:/AnnaHuzii/study java/hw_m6/hw_servlets"
+  }

@@ -1,0 +1,28 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form name="radio" method="POST" action="/">
+    <p>Please select a table you want to operate with:</p>
+    <input type="radio" id="Developers" name="table" value="developers">
+    <label for="Developers">Developers</label><br>
+    <input type="radio" id="Projects" name="table" value="projects">
+    <label for="Projects">Projects</label><br>
+    <input type="radio" id="It Companies" name="table" value="companies">
+    <label for="It Companies">It Companies</label><br>
+    <input type="radio" id="Customers" name="table" value="customers">
+    <label for="Customers">Customers</label><br><br>
+    <input type="submit" value="Confirm Your choose">
+</form>
+
+</body>
+</html>
