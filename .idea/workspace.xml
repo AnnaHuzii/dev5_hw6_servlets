@@ -5,49 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16c94a2-5acd-4546-9118-1cbc35ff07ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/connection/Storage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/company/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/company/CompanyDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/customer/CustomerDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/developer/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/developer/DeveloperDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/developer/Sex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/project/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/skill/Industry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/skill/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db/skill/Skill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/addDeveloper.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prefs.json" beforeDir="false" afterPath="$PROJECT_DIR$/prefs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/control/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thymeleaf/ThymeleafController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/settings/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/settings/CommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/companies/CompaniesMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/CompaniesMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/customers/CustomersMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/CustomersMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/AddDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/DeleteDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/DevelopersMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DevelopersMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/GetInformationAboutAllDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutAllDevelopersCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/GetInformationAboutDeveloperByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/ListMiddleDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/ListMiddleDevelopersCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/QuantityJavaDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/QuantityJavaDevelopersCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/developers/UpdateDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/main/ChooseTableCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/main/ChooseTableCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/main/StartCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/main/MainMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/command/project/ProjectMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/project/ProjectMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/default_settings/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/default_settings/Prefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connection/Prefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers_developer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/information_developer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/project.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hw_m7/ProjectManagementSystem_Hibernate" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.36091954" />
