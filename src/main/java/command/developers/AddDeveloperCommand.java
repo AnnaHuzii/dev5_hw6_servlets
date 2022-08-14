@@ -2,13 +2,11 @@ package command.developers;
 
 import command.settings.Command;
 import connection.Storage;
-import db.developer.Developer;
 import db.developer.DeveloperDaoService;
 import db.developer.Sex;
 import db.skill.Industry;
 import db.skill.Level;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.context.Context;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,9 +16,6 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
 
 public class AddDeveloperCommand implements Command {
     @Override

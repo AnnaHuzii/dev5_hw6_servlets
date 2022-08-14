@@ -2,7 +2,6 @@ package command.developers;
 
 import command.settings.Command;
 import connection.Storage;
-import db.developer.Developer;
 import db.developer.DeveloperDaoService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
@@ -14,7 +13,7 @@ import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.List;
+
 
 public class DeleteDeveloperCommand implements Command {
     @Override

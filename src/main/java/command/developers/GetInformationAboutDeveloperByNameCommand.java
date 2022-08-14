@@ -4,7 +4,6 @@ import command.settings.Command;
 import connection.Storage;
 import db.developer.Developer;
 import db.developer.DeveloperDaoService;
-import db.skill.Skill;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
@@ -17,7 +16,6 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.StringJoiner;
 
 public class GetInformationAboutDeveloperByNameCommand implements Command {
     @Override

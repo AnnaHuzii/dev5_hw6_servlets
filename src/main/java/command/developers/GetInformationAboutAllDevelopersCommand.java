@@ -1,24 +1,19 @@
 package command.developers;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import command.settings.Command;
 import connection.Storage;
 import db.developer.DeveloperDaoService;
 import org.thymeleaf.TemplateEngine;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.swing.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.*;
-import java.util.stream.Collectors;
+
 
 public class GetInformationAboutAllDevelopersCommand implements Command {
 
