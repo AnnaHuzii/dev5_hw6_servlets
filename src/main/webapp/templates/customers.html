@@ -16,14 +16,14 @@
 
 <div>
     <h3>1. List of  all customers </h3>
-    <form method="POST" name="listAllCustomers" action="/customers/all_customers">
+    <form name="listAllCustomers" action="/hw_servlets/customers/all_customers" method="POST">
         <input type="submit" name="listAllCustomers_submit" value="Get info">
     </form>
 </div>
 
 <div>
     <h3>2. Add customer </h3>
-    <form method="POST" name="addCustomer" action="/customers/add">
+    <form name="addCustomer" action="/hw_servlets/customers/add" method="POST" >
         Customer Name: <input type="text" name="customerName"><br>
         Reputation (trustworthy, respectable, insolvent): <input type="text" name="customerReputation"><br>
         <input type="submit" name="addCustomer_submit" value="Add">
@@ -32,9 +32,16 @@
 
 <div>
     <h3>3. Delete customer </h3>
-    <form method="POST" name="deleteCustomer" action="/customers/delete">
+    <form name="deleteCustomer" action="/hw_servlets/customers/delete" method="POST">
         Customer Name: <input type="text" name="customerName"><br>
         <input type="submit" name="deleteCustomer_submit" value="Delete">
+    </form>
+</div>
+
+<div>
+    <h4> </h4>
+    <form action="/hw_servlets" method="GET">
+        <input type="submit" value="To the main menu">
     </form>
 </div>
 

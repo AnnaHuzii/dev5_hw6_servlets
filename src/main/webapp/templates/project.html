@@ -15,14 +15,14 @@
 <h2>You can get such following information from this table</h2>
 <div>
     <h3>1. List of  all projects </h3>
-    <form method="POST" name="listAllProjects" action="/projects/all_projects">
+    <form name="listAllProjects" action="/hw_servlets/projects/all_projects" method="POST">
         <input type="submit" name="listAllProjects_submit" value="Get info">
     </form>
 </div>
 
 <div>
     <h3>2. All info about project </h3>
-    <form method="POST" name="project" action="/project/project">
+    <form name="project" action="/hw_servlets/project/project" method="POST">
         Project Name: <input type="text" name="projectName"><br>
         <input type="submit" name="project_submit" value="Get info">
     </form>
@@ -30,7 +30,7 @@
 
 <div>
     <h3>3. List developers of certain project </h3>
-    <form method="POST" name="listDevelopersOfProject" action="/projects/developers">
+    <form name="listDevelopersOfProject" action="/hw_servlets/projects/developers" method="POST">
         Project Name: <input type="text" name="projectName"><br>
         <input type="submit" name="listDevelopersOfProject_submit" value="Get info">
     </form>
@@ -38,7 +38,7 @@
 
 <div>
     <h3>4. Cost of certain project </h3>
-    <form method="POST" name="costOfProject" action="/projects/cost">
+    <form name="costOfProject" action="/hw_servlets/projects/cost" method="POST">
         Project Name: <input type="text" name="projectName"><br>
         <input type="submit" name="costOfProject_submit" value="Get info">
     </form>
@@ -46,7 +46,7 @@
 
 <div>
     <h3>5. List of  all projects  in format :  "date-name-quantity developers" </h3>
-    <form method="POST" name="listAllProjectsInSpecialFormat" action="/projects/all_projects_in_special_format">
+    <form name="listAllProjectsInSpecialFormat" action="/hw_servlets/projects/all_projects_in_special_format" method="POST" >
         <input type="submit" name="listAllProjectsInSpecialFormat_submit" value="Get info">
     </form>
 </div>
@@ -54,7 +54,7 @@
 
 <div>
     <h3>6. Add project </h3>
-    <form method="POST" name="addProject" action="/project/add">
+    <form name="addProject" action="/hw_servlets/project/add" method="POST">
         Project Name: <input type="text" name="projectName"><br>
         Company Name: <input type="text" name="companyName"><br>
         Customer Name: <input type="text" name="customerName"><br>
@@ -66,7 +66,7 @@
 
 <div>
     <h3>7. Update project </h3>
-    <form method="POST" name="updateProject" action="/project/update">
+    <form name="updateProject" action="/hw_servlets/project/update" method="POST" >
         Project Name: <input type="text" name="projectName"><br>
         Company Name: <input type="text" name="companyName"><br>
         Customer Name: <input type="text" name="customerName"><br>
@@ -78,11 +78,16 @@
 
 <div>
     <h3>8. Delete project </h3>
-    <form method="POST" name="deleteProject" action="/project/delete">
+    <form name="deleteProject" action="/hw_servlets/project/delete" method="POST">
         Project Name: <input type="text" name="projectName"><br>
         <input type="submit" name="deleteProject_submit" value="Get info">
     </form>
 </div>
-
+<div>
+    <h4> </h4>
+    <form action="/hw_servlets" method="GET">
+        <input type="submit" value="To the main menu">
+    </form>
+</div>
 </body>
 </html>

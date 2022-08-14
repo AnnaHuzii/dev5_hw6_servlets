@@ -7,80 +7,310 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Developer</title>
+    <style>
+
+    .form-retreat2 {
+     margin-bottom: 2rem;
+    }
+
+    .form-control-string {
+     margin-bottom: 1rem;
+    }
+
+.submit1 {
+    background-color: #008CBA;
+    padding: 10px 60px;
+    color: white;
+    font-size: 10pt;
+    border-radius: 12px;
+   }
+.submit2 {
+    background-color: #008CBA;
+    padding: 14px 100px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+   }
+   /* Dropdown Button */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+    </style>
 </head>
 <body>
-
-<h1>Table: Developers</h1>
-<h2>You can get such following information from this table</h2>
 <div>
-    <h3>1. List of  all developers </h3>
-    <form method="POST" name="listAllDevelopers" action="/developers/all_developers">
-        <input type="submit" name="listAllDevelopers_submit" value="Get info">
-    </form>
-</div>
+    <h1>Table: Developers</h1>
+    <h2>You can get such following information from this table</h2>
+    <div>
+        <form name="listAllDevelopers" action="/hw_servlets/developers/all_developers" method="POST">
+            <h3>1. List of all developers </h3>
+            <input class="submit1" type="submit" name="listAllDevelopers_submit" value="Get info">
+        </form>
+    </div>
+    <div>
+        <form name="developer" action="/hw_servlets/developers/developer_info" method="POST">
+            <h3>2. All info about developer </h3>
+            <div class="form-control-string">
+                <div class="form-control-string">
+                    <div>
+                        Full Name:
+                    </div>
+                    <div>
+                        <input type="text" name="developerFullName">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Birth date:
+                    </div>
+                    <div>
+                        <input type="date" name="developerBirthDate">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input class="submit1" type="submit" name="developer_submit" value="Get info">
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>3. Quantity of Java-developers </h3>
+        <form name="javaDevelopers" action="/hw_servlets/developers/quantity_java_developers" method="POST">
+            <input class="submit1" type="submit" name="javaDevelopers_submit" value="Get info">
+        </form>
+    </div>
+    <div>
+        <h3>4. List of middle developers </h3>
+        <form name="listMiddleDevelopers" action="/hw_servlets/developers/middle_developers" method="POST">
+            <input class="submit1" type="submit" name="listMiddleDevelopers_submit" value="Get info">
+        </form>
+    </div>
+    <div>
+        <h3>5. Add developer </h3>
+        <form name="addDeveloper" action="/hw_servlets/developers/add" method="POST">
+            <div>
+                <div class="form-control-string">
+                    <div>
+                        Full Name:
+                    </div>
+                    <div>
+                        <input type="text" name="developerFullName">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Birth date:
+                    </div>
+                    <div>
+                        <input type="date" name="developerBirthDate">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Sex:
+                    </div>
+                    <div>
+                        <select name="developerSex">
+                            <option selected value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="unknown">unknown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Email:
+                    </div>
+                    <div>
+                        <input type="text" name="developerEmail">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Skype:
+                    </div>
+                    <div>
+                        <input type="text" name="developerSkype">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Project (KUP Agro):
+                    </div>
+                    <div>
+                        <input type="text" name="developerProject">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Salary:
+                    </div>
+                    <div>
+                        <input type="text" name="developerSalary">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Languages:
+                    </div>
+                    <div>
+                        <select name="developerLanguage">
+                            <option selected value="Java">Java</option>
+                            <option value="JS">JS</option>
+                            <option value="C++">C++</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Language level:
+                    </div>
+                    <select name="developerLanguageLevel">
+                        <option selected value="Junior">Junior</option>
+                        <option value="Middle">Middle</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="submit1" type="submit" name="addDeveloper_submit" value="Add">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>6. Update developer data </h3>
+        <form name="updateDeveloper" action="/hw_servlets/developers/update" method="POST">
+            <div>
+                <div class="form-control-string">
+                    <div>
+                        Full Name:
+                    </div>
+                    <div>
+                        <input type="text" name="developerFullName">
+                    </div>
+                </div>
 
-<div>
-    <h3>2. All info about developer </h3>
-    <form method="POST" name="developer" action="/developers/developer_info">
-        Last Name: <input type="text" name="developerLastName"><br>
-        First Name: <input type="text" name="developerFirstName"><br>
-        <input type="submit" name="developer_submit" value="Get info">
-    </form>
-</div>
+                <div class="form-control-string">
+                    <div>
+                        Birth date:
+                    </div>
+                    <div>
+                        <input type="date" name="developerBirthDate">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Sex:
+                    </div>
+                    <div>
+                        <select name="developerSex">
+                            <option selected value="male">male</option>
+                            <option value="female">female</option>
+                            <option value="unknown">unknown</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Email:
+                    </div>
+                    <div>
+                        <input type="text" name="developerEmail">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Skype:
+                    </div>
+                    <div>
+                        <input type="text" name="developerSkype">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Project:
+                    </div>
+                    <div>
+                        <input type="text" name="developerProject">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Salary:
+                    </div>
+                    <div>
+                        <input type="text" name="developerSalary">
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Languages:
+                    </div>
+                    <div>
+                        <select name="developerLanguage">
+                            <option selected value="Java">Java</option>
+                            <option value="JS">JS</option>
+                            <option value="C++">C++</option>
+                            <option value="PHP">PHP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-control-string">
+                    <div>
+                        Language level:
+                    </div>
+                    <select name="developerLanguageLevel">
+                        <option selected value="Junior">Junior</option>
+                        <option value="Middle">Middle</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                </div>
+                <div>
+                    <input class="submit1" type="submit" name="updateDeveloper_submit" value="Update">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <h3>7. Delete developer </h3>
+        <form name="deleteDveloper" action="/hw_servlets/developers/delete" method="POST">
+            <div class="form-retreat2">
+                <div class="form-control-string">
+                    <div class="form-control-string">
+                        <div>
+                            Full Name:
+                        </div>
+                        <div>
+                            <input type="text" name="developerFullName">
+                        </div>
+                    </div>
 
-<div>
-    <h3>3. Quantity of  Java-developers </h3>
-    <form method="POST" name="javaDevelopers" action="/developers/java_developers">
-        <input type="submit" name="javaDevelopers_submit" value="Get info">
-    </form>
+                    <div class="form-control-string">
+                        <div>
+                            Birth date:
+                        </div>
+                        <div>
+                            <input type="date" name="developerBirthDate">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input class="submit1" type="submit" name="deleteDeveloper_submit" value="Delete">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form action="/hw_servlets" method="GET">
+            <input class="submit2" type="submit" value="To the main menu">
+        </form>
+    </div>
 </div>
-
-<div>
-    <h3>4. List of  middle developers </h3>
-    <form method="POST" name="listMiddleDevelopers" action="/developers/middle_developers">
-        <input type="submit" name="listMiddleDevelopers_submit" value="Get info">
-    </form>
-</div>
-
-<div>
-    <h3>5. Add developer </h3>
-    <form method="POST" name="addDeveloper" action="/developers/add">
-        Last Name: <input type="text" name="developerLastName"><br>
-        First Name: <input type="text" name="developerFirsrtName"><br>
-        Age: <input type="text" name="developerAge"><br>
-        Company: <input type="text" name="developerCompany"><br>
-        Project: <input type="text" name="developerProject"><br>
-        Salary: <input type="text" name="developerSalary"><br>
-        Language (Java, JS, C++, PHP): <input type="text" name="developerLanguage"><br>
-        Language Level (junior, middle, senior): <input type="text" name="developerLanguageLevel"><br>
-        <input type="submit" name="addDeveloper_submit" value="Add">
-    </form>
-</div>
-
-<div>
-<h3>6. Update developer data </h3>
-<form method="POST" name="updateDeveloper" action="/developers/update">
-    Last Name: <input type="text" name="developerLastName"><br>
-    First Name: <input type="text" name="developerFirsrtName"><br>
-    Age: <input type="text" name="developerAge"><br>
-    Company: <input type="text" name="developerCompany"><br>
-    Project: <input type="text" name="developerProject"><br>
-    Salary: <input type="text" name="developerSalary"><br>
-    Language (Java, JS, C++, PHP): <input type="text" name="developerLanguage"><br>
-    Language Level (junior, middle, senior): <input type="text" name="developerLanguageLevel"><br>
-    <input type="submit" name="updateDeveloper_submit" value="Update">
-</form>
-</div>
-
-<div>
-    <h3>7. Delete developer </h3>
-    <form method="POST" name="deleteDveloper" action="/developers/delete">
-        Last Name: <input type="text" name="developerLastName"><br>
-        First Name: <input type="text" name="developerFirstName"><br>
-        <input type="submit" name="deleteDeveloper_submit" value="Delete">
-    </form>
-</div>
-
 </body>
 </html>

@@ -7,22 +7,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Main</title>
+
+    <style>
+    .form-center{
+	padding: 50px;
+	background: #ccc;
+	position: fixed; top: 50%; left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	}
+    .form-retreat {
+     margin-bottom: 2rem;
+    }
+
+.submit1 {
+    background-color: #008CBA;
+    padding: 14px 40px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+   }
+    </style>
 </head>
 <body>
-
-<form name="radio" method="POST" action="/">
-    <p>Please select a table you want to operate with:</p>
-    <input type="radio" id="Developers" name="table" value="developers">
-    <label for="Developers">Developers</label><br>
-    <input type="radio" id="Projects" name="table" value="projects">
-    <label for="Projects">Projects</label><br>
-    <input type="radio" id="It Companies" name="table" value="companies">
-    <label for="It Companies">It Companies</label><br>
-    <input type="radio" id="Customers" name="table" value="customers">
-    <label for="Customers">Customers</label><br><br>
-    <input type="submit" value="Confirm Your choose">
-</form>
-
+<div class="form-center">
+    <form name="radio" action="/hw_servlets/" method="POST">
+        <p>Please select a table you want to operate with:</p>
+        <input type="radio" id="Developers" name="table" value="developers" checked>
+        <label for="Developers">Developers</label><br>
+        <input type="radio" id="Project" name="table" value="project">
+        <label for="Project">Project</label><br>
+        <input type="radio" id="It Companies" name="table" value="companies">
+        <label for="It Companies">It Companies</label><br>
+        <input type="radio" id="Customers" name="table" value="customers">
+        <label for="Customers">Customers</label><br><br>
+        <input class="submit1" type="submit" value="Confirm your choose">
+    </form>
+</div>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Information</title>
+    <style>
+   .submit2 {
+    background-color: #008CBA;
+    padding: 14px 100px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+    }
+    .form-retreat2 {
+     margin-bottom: 2rem;
+    }
+
+    </style>
+</head>
+<body>
+<div class="form-retreat2">
+    <h1 th:text=" 'Full information about the developer: ' + ${fullName}"></h1>
+    <h3 th:text=" 'Birth date - ' + ${birthDateInfo} "></h3>
+    <h3 th:text="'Sex - ' + ${Sex}"></h3>
+    <h3 th:text="'Email - ' + ${Email}"></h3>
+    <h3 th:text="'Skype - ' + ${Skype}"></h3>
+    <h3 th:text="'Salary - ' + ${Salary}"></h3>
+    <div class="form-retreat2">
+        <h3 th:text="'Has a programming language: '"></h3>
+        <div th:text="${Skill}"></div>
+        <h3 th:text="'Participates in projects: '"></h3>
+        <div th:text="${Projects}"></div>
+    </div>
+    <div>
+        <form action="/hw_servlets/developers" method="GET">
+            <input class="submit2" type="submit" value="Developer menu">
+        </form>
+    </div>
+</div>
+</body>
+</html>
