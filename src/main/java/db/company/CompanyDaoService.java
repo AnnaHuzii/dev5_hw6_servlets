@@ -65,7 +65,6 @@ public class CompanyDaoService {
     }
 
     public String getAllNames() throws SQLException {
-        System.out.println("Список всіх IT компаній:");
         StringJoiner result = new StringJoiner("<br>");
         for (Company company : companies) {
             getQuantityEmployee.setString(1, "%" + company.getCompanyName() + "%");

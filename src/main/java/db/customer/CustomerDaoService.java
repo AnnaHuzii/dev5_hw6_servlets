@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class CustomerDaoService {
     public static  List<Customer> customers = new ArrayList<>();
@@ -55,42 +56,42 @@ public class CustomerDaoService {
         );
     }
 
-    public void getAllNames() throws SQLException {
-        System.out.println("Список всех  заказчиков :");
+    public String getAllNames() throws SQLException {
+        StringJoiner result = new StringJoiner("<br>");
         try (ResultSet rs = getAllNamesSt.executeQuery()) {
             while (rs.next()) {
                 long customerID = rs.getLong("id");
                 String customerName = rs.getString("name");
                 int customerEDRPOU = rs.getInt("EDRPOU");
                 String customerProduct = rs.getString("product");
-                System.out.println("\t" + customerID + ". "
+                result.add("\t" + customerID + ". "
                         + customerName
                         + "; EDRPOU - " + customerEDRPOU
-                        + "; Продукт - " + customerProduct + ";");
-                System.out.println("\t\tЯвляєтся замовником наступних проектів: ");
+                        + "; Product - " + customerProduct + ";");
+                result.add("\t\tHe is the customer of the following projects: ");
                 getProjectsNamesSt.setString(1, "%" + customerName + "%");
                 try (ResultSet rs1 = getProjectsNamesSt.executeQuery()) {
                     while (rs1.next()) {
-                        System.out.println("\t\t" + rs1.getString("project.name"));
+                        result.add("\t\t" + rs1.getString("project.name"));
                     }
                 }
             }
         }
+        customers.clear();
+        return result.toString();
     }
 
-    public void addCustomer() throws SQLException {
+    public String addCustomer(String newCustomerName, int newCustomerEDRPOU, String newCustomerProduct) throws SQLException {
         long newCustomerId;
         try(ResultSet rs = selectMaxIdSt.executeQuery()) {
             rs.next();
             newCustomerId = rs.getLong("maxId");
         }
         newCustomerId++;
-        String newCustomerName = "BI-company, Ukraine";
-        System.out.println("\tНазвана замовника, якого потрібно добавити: " + newCustomerName);
-        int newCustomerEDRPOU = 1599512364;
-        System.out.println("\tEDRPOU замовника: " + newCustomerEDRPOU);
-        String newCustomerProduct = "ERP Construction management";
-        System.out.println("\tПродукт замовника: " + newCustomerProduct);
+        //"BI-company, Ukraine";
+        // 1599512364;
+       // "ERP Construction management";
+
         addCustomerSt.setLong(1, newCustomerId);
         addCustomerSt.setString(2, newCustomerName);
         addCustomerSt.setInt(3, newCustomerEDRPOU);
@@ -104,11 +105,15 @@ public class CustomerDaoService {
         customer.setProduct(newCustomerProduct);
 
         addCustomerSt.executeUpdate();
-
+        String result;
         if (existsCustomer(newCustomerId)) {
-            System.out.println("\tЗаказчик успешно добавлен");
+            result = "The customer has been successfully added";
         }
-        else System.out.println("Что-то пошло не так и заказчик не был  добавлен в базу данных");
+        else {
+            result = "Something went wrong and the customer was not added to the database";
+        }
+        customers.clear();
+        return result;
     }
 
     public boolean existsCustomer(long id) throws SQLException {

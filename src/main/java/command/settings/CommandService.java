@@ -3,7 +3,9 @@ package command.settings;
 import command.companies.AddCompanies;
 import command.companies.CompaniesMenuCommand;
 import command.companies.GetInformationAboutAllCompanies;
+import command.customers.AddCustomers;
 import command.customers.CustomersMenuCommand;
+import command.customers.GetInformationAboutAllCustomers;
 import command.developers.*;
 import command.main.ChooseTableCommand;
 import command.main.MainMenuCommand;
@@ -43,7 +45,8 @@ public class CommandService {
         commands.put("GET /hw_servlets/project", new ProjectMenuCommand());
 
         commands.put("GET /hw_servlets/customers", new CustomersMenuCommand());
-
+        commands.put("POST /hw_servlets/customers/all_customers", new GetInformationAboutAllCustomers());
+        commands.put("POST /hw_servlets/customers/add", new AddCustomers());
 
     }
 
