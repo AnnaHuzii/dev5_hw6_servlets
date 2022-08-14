@@ -4,7 +4,6 @@ import db.project.ProjectDaoService;
 import db.skill.Industry;
 import db.skill.Level;
 import connection.Storage;
-import db.skill.Skill;
 
 import java.sql.*;
 import java.sql.Date;
@@ -168,7 +167,6 @@ public class DeveloperDaoService {
 
         try (ResultSet resultSet = getSkillsByFullName.executeQuery()) {
             while (resultSet.next()) {
-                Skill skill = new Skill();
                 String industry = resultSet.getString("industry");
                 Industry industryName = null;
                 if (industry.equals(Industry.C_PLUS_PLUS.getIndustryName())) {
@@ -310,9 +308,8 @@ public class DeveloperDaoService {
 
         deleteDeveloperFromDevelopersById.setLong(1, idToDelete);
         deleteDeveloperFromDevelopersById.executeUpdate();
-        developers.clear();
         developers.removeIf(nextDeveloper -> nextDeveloper.getDeveloperId() == idToDelete);
-
+        developers.clear();
         String result;
         if (idToDelete != 0) {
             result = "The developer has been successfully removed";

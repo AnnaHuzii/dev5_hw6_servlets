@@ -8,39 +8,78 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    .submit2 {
+    background-color: #008CBA;
+    padding: 12px 30px;
+    color: white;
+    font-size: 12pt;
+    border-radius: 12px;
+    }
+    .form-retreat {
+    margin-bottom: 2rem;
+    }
+    .form-control-string {
+     margin-bottom: 1rem;
+    }
+.submit1 {
+    background-color: #008CBA;
+    padding: 14px 100px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+   }
+.string-description{
+ padding: 12px 40px;
+}
+    </style>
+
 </head>
 <body>
+<div>
+    <h1>Table : Companies</h1>
+    <h2>You can get such following information from this table</h2>
+    <div class="form-retreat">
+        <h3>1. List of all companies </h3>
+        <form name="listAllCompanies" action="/hw_servlets/companies/all_companies" method="POST">
+            <input class="submit2" type="submit" name="listAllCompanies_submit" value="Get info">
+        </form>
+    </div>
 
-<h1>Table :  Companies</h1>
-<h2>You can get such following information from this table</h2>
-<div>
-    <h3>1. List of  all companies </h3>
-    <form method="POST" name="listAllCompanies" action="/companies/all_companies">
-        <input type="submit" name="listAllCompanies_submit" value="Get info">
-    </form>
-</div>
+    <div class="form-retreat">
+        <h3>2. Add company </h3>
+        <form method="POST" name="addCompany" action="/hw_servlets/companies/add">
+            <div>
+                <div>
+                    <div class="form-control-string">
+                        <div>
+                            Company Name:
+                        </div>
+                        <div>
+                            <input type="text" name="companyName">
+                        </div>
+                    </div>
+                    <div class="form-control-string">
+                        <div>
+                            Description:
+                        </div>
+                        <div>
+                            <input class="string-description" type="text" name="companyDescription">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <input class="submit2" type="submit" name="addCompany_submit" value="Add">
+                </div>
 
-<div>
-    <h3>2. Add company </h3>
-    <form method="POST" name="addCompany" action="/hw_servlets/companies/add">
-        Company Name: <input type="text" name="companyName"><br>
-        Rating (high, middle, low): <input type="text" name="companyRating"><br>
-        <input type="submit" name="addCompany_submit" value="Add">
-    </form>
-</div>
-
-<div>
-    <h3>3. Delete company </h3>
-    <form method="POST" name="deleteCompany" action="/hw_servlets/companies/delete">
-        Company Name: <input type="text" name="projectName"><br>
-        <input type="submit" name="deleteCompany_submit" value="Delete">
-    </form>
-</div>
-<div>
-    <h4> </h4>
-    <form action="/hw_servlets" method="GET">
-        <input type="submit" value="To the main menu">
-    </form>
+            </div>
+        </form>
+    </div>
+    <div>
+        <form action="/hw_servlets" method="GET">
+            <input class="submit1" type="submit" value="To the main menu">
+        </form>
+    </div>
 </div>
 </body>
 </html>

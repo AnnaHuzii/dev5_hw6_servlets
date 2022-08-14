@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class CompanyDaoService {
     public static List<Company> companies = new ArrayList<>();
@@ -63,12 +64,15 @@ public class CompanyDaoService {
         );
     }
 
-    public void getAllNames() throws SQLException {
+    public String getAllNames() throws SQLException {
         System.out.println("Список всіх IT компаній:");
+        StringJoiner result = new StringJoiner("<br>");
         for (Company company : companies) {
             getQuantityEmployee.setString(1, "%" + company.getCompanyName() + "%");
-            System.out.println("\t" + company.getCompanyId() + ". " + company.getCompanyName() + "; Опис - " + company.getDescription());
+            result.add("\t" + company.getCompanyId() + ". " + company.getCompanyName() + "; Description - " + company.getDescription());
         }
+        companies.clear();
+        return result.toString();
     }
 
     public long getIdCompanyByName(String name) throws SQLException {
@@ -93,7 +97,7 @@ public class CompanyDaoService {
         return projectsList;
     }
 
-    public void addCompany() throws SQLException {
+    public String addCompany(String newCompanyName, String newCompanyDescription) throws SQLException {
         long newCompanyId;
         try(ResultSet resultSet = selectMaxId.executeQuery()) {
             resultSet.next();
@@ -101,23 +105,25 @@ public class CompanyDaoService {
         }
         newCompanyId++;
 
-        String newCompanyName = "BI-DON";
-        System.out.println("Назва компанії, що створюється: " + newCompanyName);
-        String newCompanyDescription = "Development of computer games and mobile applications";
-        System.out.println("Опис компанії " + newCompanyName + " - " + newCompanyDescription);
         addCompany.setLong(1, newCompanyId);
         addCompany.setString(2, newCompanyName);
         addCompany.setString(3, newCompanyDescription);
-        Company company = new Company();
 
+        Company company = new Company();
         company.setCompanyId(newCompanyId);
         company.setCompanyName(newCompanyName);
         company.setDescription(newCompanyDescription);
 
         addCompany.executeUpdate();
-
-        if (existsCompany(newCompanyId)) {System.out.println("Компанія успішно добавленна");}
-        else System.out.println("Винекла помилка. компанія не було добавлена");
+        companies.clear();
+        String result;
+        if (existsCompany(newCompanyId)) {
+            result = "Company successfully added:";
+        }
+        else {
+            result = "An error occurred. the company has not been added";
+        }
+        return result;
     }
 
     public boolean existsCompany(long id) throws SQLException {
@@ -127,6 +133,4 @@ public class CompanyDaoService {
             return rs.getBoolean("companyExists");
         }
     }
-
-
 }
