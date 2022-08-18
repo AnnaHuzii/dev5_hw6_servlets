@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quantity Java Developers</title>
+    <style>
+    .form-center{
+	padding: 50px;
+	background: #ccc;
+	position: fixed; top: 50%; left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	}
+    .form-retreat {
+     margin-bottom: 2rem;
+    }
+    .submit1 {
+    background-color: #008CBA;
+    padding: 14px 40px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+   }
+    </style>
+</head>
+<body>
+<div class="form-center">
+    <form name="quantity_java_developers" action="/hw_servlets/developers" method="GET">
+        <div style="text-align:center">
+            <h1 th:text="${QuantityJavaDevelopers} + ' - Java - developers, works in companies'" ></h1>
+            <input class="submit1" type="submit" value="Developer menu">
+        </div>
+    </form>
+</div>
+</body>
+</html>

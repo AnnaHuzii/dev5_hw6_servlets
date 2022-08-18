@@ -20,51 +20,45 @@ import java.util.List;
 public class GetInformationAboutDeveloperByNameCommand implements Command {
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp, TemplateEngine engine) throws IOException, SQLException, ParseException {
-        PrintWriter out = resp.getWriter();
-        Storage storage = Storage.getInstance();
-        String fullName = "";
+        Storage util = Storage.getInstance();
+        Context context = new Context();
+        String fullName = req.getParameter("developerFullName");
         Date birthDate = null;
         try {
-            fullName = req.getParameter("developerFullName");
             birthDate = Date.valueOf(LocalDate.parse(req.getParameter("developerBirthDate")));
         } catch (Exception e) {
-            resp.getWriter().write("<h1>You have entered incorrect data, please try again</h1>");
-            out.println("<p >" +
-                    "<form action=/hw_servlets/developers method=GET>" +
-                    "<input type=submit value='Developer menu' />" +
-                    "</p>");
+
+            engine.process("error_developer_incorrectly", context, resp.getWriter());
             resp.getWriter().close();
         }
-        DeveloperDaoService developerDaoService = new DeveloperDaoService(storage.getConnection());
-        Context context = new Context();
-        context.setVariable("fullName", fullName);
+        if (!fullName.equals("")) {
+            DeveloperDaoService developerDaoService = new DeveloperDaoService(util.getConnection());
 
-        List<Developer> InfoByFullName = developerDaoService.getInfoByFullName(fullName, birthDate);
-
-        String SkillsByFullName = developerDaoService.getSkillsByFullName(fullName, birthDate);
-        String ProjectsByFullName = developerDaoService.getProjectsByFullName(fullName,birthDate);
-
-        if (InfoByFullName.size() != 0) {
-            for (Developer info : InfoByFullName) {
-                String birthDateInfo = String.valueOf(info.getBirthDate());
-                context.setVariable("birthDateInfo", birthDateInfo);
-                context.setVariable("Sex", info.getSex());
-                context.setVariable("Email", info.getEmail());
-                context.setVariable("Skype", info.getSkype());
-                context.setVariable("Salary", info.getSalary());
+            List<Developer> InfoByFullName = developerDaoService.getInfoByFullName(fullName, birthDate);
+            String SkillsByFullName = developerDaoService.getSkillsByFullName(fullName, birthDate);
+            String ProjectsByFullName = developerDaoService.getProjectsByFullName(fullName, birthDate);
+            context.setVariable("fullName", fullName);
+            if (InfoByFullName.size() != 0) {
+                for (Developer info : InfoByFullName) {
+                    String birthDateInfo = String.valueOf(info.getBirthDate());
+                    context.setVariable("birthDateInfo", birthDateInfo);
+                    context.setVariable("Sex", info.getSex());
+                    context.setVariable("Email", info.getEmail());
+                    context.setVariable("Skype", info.getSkype());
+                    context.setVariable("Salary", info.getSalary());
+                }
+                context.setVariable("Skill", SkillsByFullName);
+                context.setVariable("Projects", ProjectsByFullName);
+                engine.process("developer_information", context, resp.getWriter());
+                resp.getWriter().close();
+            } else {
+                engine.process("error_developer", context, resp.getWriter());
+                resp.getWriter().close();
             }
-            context.setVariable("Skill", SkillsByFullName);
-            context.setVariable("Projects", ProjectsByFullName);
-
-            engine.process("information_developer", context, resp.getWriter());
         } else {
-            resp.getWriter().write("<h1>No such developer found, please enter the correct details again</h1>");
-            out.println("<p >" +
-                    "<form action=/hw_servlets/developers method=GET>" +
-                    "<input type=submit value='Developer menu' />" +
-                    "</p>");
-
+            engine.process("error_developer_incorrectly", context, resp.getWriter());
+            resp.getWriter().close();
         }
-        resp.getWriter().close();
     }
+
 }

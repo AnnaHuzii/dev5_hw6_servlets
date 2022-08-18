@@ -5,14 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16c94a2-5acd-4546-9118-1cbc35ff07ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/command/customers/GetInformationAboutAllCustomers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/project/AllInfoAboutProjectCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/project/ListAllProjectCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/connection/PropertiesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/prefs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies_all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers_all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers_list_middle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers_quantity_java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_companies_incorrectly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_customer_incorrectly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_developer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_developer_incorrectly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_projects_incorrectly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/project_all_info_about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/projects_list_of_all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/companies/AddCompanies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/AddCompanies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/companies/CompaniesMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/CompaniesMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/companies/GetInformationAboutAllCompanies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/GetInformationAboutAllCompanies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/customers/GetInformationAboutAllCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/GetInformationAboutAllCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutAllDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutAllDevelopersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/ListMiddleDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/ListMiddleDevelopersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/QuantityJavaDevelopersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/QuantityJavaDevelopersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/command/settings/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/settings/CommandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connection/Prefs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/connection/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/connection/Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/company/CompanyDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/company/CompanyDaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/customer/CustomerDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/customer/CustomerDaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/developer/DeveloperDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/developer/DeveloperDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/thymeleaf/ThymeleafController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/thymeleaf/ThymeleafController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V1_initDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V1__create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V2_populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.migration/V2__insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/addDeveloper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/information_developer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/project.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +104,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hw_m4/ProjectManagementSystem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15527344" />
     <property name="project.structure.side.proportion" value="0.36091954" />
@@ -68,22 +112,48 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="command.project" />
       <recent name="command.customers" />
       <recent name="command.companies" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main\webapp\templates" />
       <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main\resources" />
+      <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main\webapp" />
       <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets" />
       <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main\java" />
-      <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\test\resources\db.migration" />
-      <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets" />
       <recent name="C:\AnnaHuzii\study java\hw_m6\hw_servlets\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="command.project" />
+      <recent name="connection" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Smart Tomcat.ServerTomcat">
+    <configuration name="hw_servlets [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ServerTomcat" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
       <option name="adminPort" value="8005" />
       <option name="contextPath" value="/hw_servlets" />
@@ -104,6 +174,11 @@
         <option name="MakeProject" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.hw_servlets [dependencies]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -117,20 +192,6 @@
     <servers />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/command/settings/CommandService.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.lang.String" memberName="hash" />
@@ -139,7 +200,7 @@
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="com.poratu.idea.plugins.tomcat">
-        <watch expression="commandKey" language="JAVA" />
+        <watch expression="developers" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

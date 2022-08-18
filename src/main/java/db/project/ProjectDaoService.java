@@ -4,6 +4,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class ProjectDaoService {
     private final PreparedStatement getAllNames;
@@ -82,53 +83,56 @@ public class ProjectDaoService {
                 "SELECT id FROM project " +
                     "WHERE project.name LIKE ?"
         );
-
     }
 
-    public void getAllNames() throws SQLException {
-        System.out.println("Список всіх  проектів :");
+    public String getAllNames() throws SQLException {
+        StringJoiner result = new StringJoiner("<br>");
         try (ResultSet resultSet = getAllNames.executeQuery()) {
             while (resultSet.next()) {
                 long projectID = resultSet.getLong("id");
                 String projectName = resultSet.getString("name");
-                System.out.println("\t" + projectID + ". " + projectName);
+                result.add(projectID + ". " + projectName);
             }
         }
+        return result.toString();
     }
 
-
-    public void getInfoByName(String name) throws SQLException {
+    public String getInfoByName(String name) throws SQLException {
+        StringJoiner description = new StringJoiner("<br>");
         getCustomerNameByProjectName.setString(1,  name);
 
         try (ResultSet rs1 = getCustomerNameByProjectName.executeQuery()) {
             while (rs1.next()) {
-                System.out.println("\tЗамовлений замовником:" + rs1.getString("name"));
+                description.add("Ordered by the customer: " + rs1.getString("name"));
             }
         }
-        System.out.print("\tРозробляється компанією: ");
         getCompanyNameByProjectName.setString(1, name);
         try (ResultSet rs2 = getCompanyNameByProjectName.executeQuery()) {
             while (rs2.next()) {
-                System.out.println( rs2.getString("name"));
+                description.add("Developed by: " + rs2.getString("name"));
             }
         }
         getCostDate.setString(1, name);
         try (ResultSet resultSet = getCostDate.executeQuery()) {
             while (resultSet.next()) {
-                System.out.println("\tОпис проекту: " + resultSet.getString("description"));
-                System.out.println("\tМає б'юджет - " + resultSet.getInt("cost"));
-                System.out.println("\tРозпочався: " + LocalDate.parse(resultSet.getString("start_date")));
+                description.add("Project description: " + resultSet.getString("description"));
+                description.add("Has a budget - " + resultSet.getInt("cost"));
+                description.add("Started by: " + LocalDate.parse(resultSet.getString("start_date")));
             }
         }
+
+        return description.toString();
     }
 
-    public void getListDevelopers (String name) throws SQLException {
+    public String getListDevelopers (String name) throws SQLException {
+        StringJoiner result = new StringJoiner("<br>");
         getListDevelopers.setString(1, name);
         try (ResultSet rs1 = getListDevelopers.executeQuery()) {
             while (rs1.next()) {
-                System.out.println("\t" + rs1.getString("full_name") + ", Дата народження: " + rs1.getDate("birth_date") );
+               result.add(rs1.getString("full_name") + ", Birth date: " + rs1.getDate("birth_date") );
             }
         }
+        return result.toString();
     }
 
 
@@ -141,30 +145,39 @@ public class ProjectDaoService {
         }
     }
 
-    public void getBudgetByProjectName (String name) throws SQLException {
+    public float getBudgetByProjectName (String name) throws SQLException {
+        float projectCost = 0f;
         getBudgetByProjectName.setString(1, name);
         try (ResultSet rs1 = getBudgetByProjectName.executeQuery()) {
             while (rs1.next()) {
-                System.out.println("\tБ'юджет даного проекту - " +  rs1.getInt("SUM(salary)"));
+                projectCost = rs1.getFloat("SUM(salary)");
             }
         }
+return projectCost;
     }
-
-    public void getProjectsListInSpecialFormat () throws SQLException {
+    public String getProjectsListInSpecialFormat () throws SQLException {
+        StringJoiner result = new StringJoiner("<br>");
         try (ResultSet rs = getAllNames.executeQuery()) {
+
             while (rs.next()) {
+                StringJoiner list = null;
+                list = new StringJoiner(", ");
                 Date projectDate = Date.valueOf(LocalDate.parse(rs.getString("start_date")));
-                System.out.print(projectDate);
+                list.add("Project start date: " + projectDate);
                 String projectName = rs.getString("name");
-                System.out.print(", " + projectName);
+                list.add("Project name: " + projectName);
                 getQuantityDevelopersByProjectName.setString(1, projectName);
-                try (ResultSet rs1 = getQuantityDevelopersByProjectName.executeQuery()) {
-                    while (rs1.next()) {
-                        System.out.println(", " + rs1.getInt("COUNT(developer_id)") + " розробник(а)");
+                try (ResultSet resultSet1 = getQuantityDevelopersByProjectName.executeQuery()) {
+                    int quantityDevelopers = 0;
+                    while (resultSet1.next()) {
+                        quantityDevelopers = resultSet1.getInt(1);
                     }
+                    list.add("quantity developers = " + quantityDevelopers);
                 }
+                result.add(list.toString());
             }
         }
+        return result.toString();
     }
 
     public long getIdProjectByName(String name) throws SQLException {

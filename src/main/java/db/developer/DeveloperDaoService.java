@@ -121,13 +121,17 @@ public class DeveloperDaoService {
 
     }
 
-    public String getAllFullName() {
-        StringJoiner result = new StringJoiner("<br>");
+    public List<Developer> getAllFullName() {
+        List<Developer> result = new ArrayList();
+
         for (Developer developer : developers) {
-            result.add(developer.getDeveloperId() + ". " + developer.getFullName() + " - " + developer.getBirthDate());
+            developer.setDeveloperId(developer.getDeveloperId());
+            developer.setFullName(developer.getFullName());
+            developer.setBirthDate(developer.getBirthDate());
+            result.add(developer);
         }
         developers.clear();
-        return result.toString();
+        return result;
     }
 
     public List<Developer> getInfoByFullName(String fullName, Date birthDate) throws SQLException {
@@ -156,9 +160,9 @@ public class DeveloperDaoService {
                 result.add(developer);
             }
         }
+        developers.clear();
         return result;
     }
-
     public String getSkillsByFullName(String fullName, Date birthDate) throws SQLException {
         getSkillsByFullName.setString(1, "%" + fullName + "%");
         getSkillsByFullName.setDate(2, Date.valueOf(String.valueOf(birthDate)));
@@ -186,12 +190,12 @@ public class DeveloperDaoService {
                     levelName = Level.MIDDLE;
                 } else if (level.equals(Level.SENIOR.getLevelName())) {
                     levelName = Level.SENIOR;
+                }
+                result.add(industryName + " - " + levelName);
             }
-            result.add(industryName + " - " + levelName);
         }
-    }
         return result.toString();
-}
+    }
 
     public String getProjectsByFullName(String fullName, Date birthDate) throws SQLException {
         getProjectsByFullName.setString(1, "%" + fullName + "%");
@@ -211,6 +215,7 @@ public class DeveloperDaoService {
             resultSet.next();
             count = resultSet.getInt("quantityIndustryDevelopers");
         }
+        developers.clear();
         return count;
     }
 
@@ -221,6 +226,7 @@ public class DeveloperDaoService {
                 result.add(resultSet.getString("full_name") + ",  programming language - " + resultSet.getString("industry"));
             }
         }
+        developers.clear();
         return result.toString();
     }
 
@@ -231,7 +237,7 @@ public class DeveloperDaoService {
         try (ResultSet resultSet = getIdByFullName.executeQuery()) {
             resultSet.next();
             id = resultSet.getInt("id");
-        }catch (Exception e){
+        } catch (Exception e) {
             id = 0;
         }
         return id;
@@ -267,7 +273,6 @@ public class DeveloperDaoService {
         developer.setSkype(skype);
         developer.setSalary(salary);
         developers.add(developer);
-        developers.clear();
         String industryName = industry.getIndustryName();
 
         String lenelName = level.getLevelName();
@@ -285,7 +290,7 @@ public class DeveloperDaoService {
         addDeveloper.executeUpdate();
         addProjectDeveloper.executeUpdate();
         addDeveloperSkill.executeUpdate();
-
+        developers.clear();
         String result;
         if (existsDeveloper(newDeveloperId)) {
             result = "Added a developer:";
@@ -319,7 +324,7 @@ public class DeveloperDaoService {
     }
 
     public String editDeveloper(String fullName, Date birthDate, Sex sex, String email, String skype, float salary, String project,
-                             Industry industry, Level level) throws SQLException {
+                                Industry industry, Level level) throws SQLException {
 
         long newDeveloperId;
         try (ResultSet rs = selectMaxId.executeQuery()) {

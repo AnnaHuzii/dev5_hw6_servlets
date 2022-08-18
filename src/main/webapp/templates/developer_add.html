@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add developer</title>
+    <style>
+    .submit1 {
+    background-color: #008CBA;
+    padding: 14px 40px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+    }
+    .form-control-string {
+     margin-bottom: 1rem;
+    }
+
+    </style>
+</head>
+<body>
+<div>
+    <form action=/hw_servlets/developers method="GET">
+        <div class="form-control-string">
+            <h1 th:text="${addDeveloper}"></h1>
+            <div th:text="${fullName} + ' - Birth date: ' + ${birthDate}"></div>
+            <div th:text="'This developer will be a participant in the project - ' + ${project}"></div>
+            <div th:text="'Developer salary - ' + ${salary}"></div>
+            <div th:text="'Has a programming language - ' + ${industryName}"></div>
+            <div th:text="'Has a level of knowledge of the programming language - ' + ${levelName}"></div>
+        </div>
+        <div>
+            <input class="submit1" type="submit" value="Developer menu">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

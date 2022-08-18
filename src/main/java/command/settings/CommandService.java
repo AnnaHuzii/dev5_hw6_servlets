@@ -9,6 +9,8 @@ import command.customers.GetInformationAboutAllCustomers;
 import command.developers.*;
 import command.main.ChooseTableCommand;
 import command.main.MainMenuCommand;
+import command.project.AllInfoAboutProjectCommand;
+import command.project.ListAllProjectCommand;
 import command.project.ProjectMenuCommand;
 import org.thymeleaf.TemplateEngine;
 
@@ -43,6 +45,8 @@ public class CommandService {
         commands.put("POST /hw_servlets/companies/add", new AddCompanies());
 
         commands.put("GET /hw_servlets/project", new ProjectMenuCommand());
+        commands.put("POST /hw_servlets/project/projects_list_of_all", new ListAllProjectCommand());
+        commands.put("POST /hw_servlets/project/project_all_info_about", new AllInfoAboutProjectCommand());
 
         commands.put("GET /hw_servlets/customers", new CustomersMenuCommand());
         commands.put("POST /hw_servlets/customers/all_customers", new GetInformationAboutAllCustomers());

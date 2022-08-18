@@ -23,7 +23,7 @@ private TemplateEngine engine;
     private ServletConfig config;
 
     @Override
-    public void init(ServletConfig config) throws ServletException  {
+    public void init(ServletConfig config)  {
         this.config = config;
         ServletContext sc = config.getServletContext();
 

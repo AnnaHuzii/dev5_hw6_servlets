@@ -1,0 +1,5 @@
+{
+  "dbUrl" :  "jdbc:mysql://localhost/mybdhw",
+  "dbUserName" :  "anna_guzii",
+  "dbPassword" :  "1984_anna"
+}

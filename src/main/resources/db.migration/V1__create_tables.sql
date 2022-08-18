@@ -7,6 +7,7 @@ CREATE TABLE developers (
     email VARCHAR(250),
     skype VARCHAR(250)
    );
+
 CREATE TABLE skills (
     id INT PRIMARY KEY AUTO_INCREMENT,
     industry ENUM('Java', 'C++', 'C#', 'JS')

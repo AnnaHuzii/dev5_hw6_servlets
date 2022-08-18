@@ -1,5 +1,6 @@
 package db.company;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -64,14 +65,17 @@ public class CompanyDaoService {
         );
     }
 
-    public String getAllNames() throws SQLException {
-        StringJoiner result = new StringJoiner("<br>");
+    public List<Company> getAllNames() throws SQLException {
+        List<Company> result = new ArrayList();
         for (Company company : companies) {
             getQuantityEmployee.setString(1, "%" + company.getCompanyName() + "%");
-            result.add("\t" + company.getCompanyId() + ". " + company.getCompanyName() + "; Description - " + company.getDescription());
+            company.setCompanyId(company.getCompanyId());
+            company.setCompanyName(company.getCompanyName());
+            company.setDescription(company.getDescription());
+            result.add(company);
         }
         companies.clear();
-        return result.toString();
+        return result;
     }
 
     public long getIdCompanyByName(String name) throws SQLException {
@@ -96,7 +100,7 @@ public class CompanyDaoService {
         return projectsList;
     }
 
-    public String addCompany(String newCompanyName, String newCompanyDescription) throws SQLException {
+    public String addCompany(String newCompanyName, String newCompanyDescription) throws IOException, SQLException {
         long newCompanyId;
         try(ResultSet resultSet = selectMaxId.executeQuery()) {
             resultSet.next();

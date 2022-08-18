@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects list of all</title>
+    <style>
+    .submit1 {
+    background-color: #008CBA;
+    padding: 14px 40px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+    }
+    .form-control-string {
+     margin-bottom: 1rem;
+    }
+
+    </style>
+</head>
+<body>
+<div>
+    <form action="/hw_servlets/project" method="GET">
+        <div class="form-control-string">
+            <div class="form-control-string">
+                <h1 th:text="'Extended data on the project: ' + ${nameProject}"></h1>
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr th:each="listInfoByName : ${listInfoByName}">
+                        <td th:text="${listInfoByName}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-retreat2">
+                <h1 th:text="'List of all project developers: ' + ${nameProject}"></h1>
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr th:each="listDeveloper : ${listDeveloper}">
+                        <td th:text="${listDeveloper}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-retreat2">
+                <h1 th:text="'Project cost: ' + ${nameProject} + ' = ' + ${projectCost} "></h1>
+            </div>
+        </div>
+        <div>
+            <input class="submit1" type="submit" value="Projects menu">
+        </div>
+    </form>
+</div>
+</body>
+</html>

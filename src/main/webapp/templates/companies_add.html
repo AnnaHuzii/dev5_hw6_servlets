@@ -1,0 +1,37 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add company</title>
+    <style>
+    .submit1 {
+    background-color: #008CBA;
+    padding: 14px 40px;
+    color: white;
+    font-size: 15pt;
+    border-radius: 12px;
+    }
+    .form-control-string {
+     margin-bottom: 1rem;
+    }
+    </style>
+</head>
+<body>
+<div>
+    <form action=/hw_servlets/companies method="GET">
+    <div class="form-control-string">
+        <h1 th:text="${addNamesCompany} + ${companyName}"></h1>
+        <b th:text="'Company description: ' + ${companyDescription}"></b>
+    </div>
+    <div>
+        <input class="submit1" type="submit" value="Companies menu">
+    </div>
+    </form>
+</div>
+
+</body>
+</html>
