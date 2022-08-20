@@ -5,54 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16c94a2-5acd-4546-9118-1cbc35ff07ad" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prefs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/DevelopersMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DevelopersMenuCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/project/AllInfoAboutProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/project/AllInfoAboutProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/project/ListAllProjectCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/project/ListAllProjectCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/command/settings/CommandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/settings/CommandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/customer/CustomerDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/customer/CustomerDaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V1__create_tables.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.migration/V2__insert.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/prefs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/companies_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/companies_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/companies_all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/customers_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/customers_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/customers_all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developer_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developer_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developer_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developer_information.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developer_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developer_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers_list_middle.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers_list_middle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/developers_quantity_java.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/developers_quantity_java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error_companies_incorrectly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_companies_incorrectly.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error_customer_incorrectly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_customer_incorrectly.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error_developer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_developer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error_developer_incorrectly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_developer_incorrectly.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/error_projects_incorrectly.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/error_projects_incorrectly.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/project_all_info_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/project_all_info_about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/projects_list_of_all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/projects_list_of_all.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
