@@ -7,7 +7,6 @@ CREATE TABLE developers (
     email VARCHAR(250),
     skype VARCHAR(250)
    );
-
 CREATE TABLE skills (
     id INT PRIMARY KEY AUTO_INCREMENT,
     industry ENUM('Java', 'C++', 'C#', 'JS')
@@ -23,7 +22,7 @@ CREATE TABLE companies (
 CREATE TABLE customers (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(200),
-    EDRPOU INT,
+    edrpou INT,
     product VARCHAR(150)
 );
 CREATE TABLE project (
@@ -47,3 +46,7 @@ CREATE TABLE developers_skills (
     FOREIGN KEY(developer_id) REFERENCES developers(id) ON DELETE CASCADE,
     FOREIGN KEY(skill_id) REFERENCES skills(id) ON DELETE CASCADE
 );
+
+ALTER TABLE developers ADD salary NUMERIC;
+
+ALTER TABLE project ADD cost NUMERIC;

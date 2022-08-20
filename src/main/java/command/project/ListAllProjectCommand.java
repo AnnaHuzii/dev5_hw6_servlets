@@ -28,8 +28,6 @@ public class ListAllProjectCommand implements Command{
             Storage util = Storage.getInstance();
             ProjectDaoService projectDaoService = new ProjectDaoService(util.getConnection());
 
-            resp.setContentType("text/html; charset=utf-8");
-
             // Вивести всі назви проектів
             String getAllNames = projectDaoService.getAllNames();
             String[] words = getAllNames.split("<br>");
@@ -47,6 +45,7 @@ public class ListAllProjectCommand implements Command{
                     req.getLocale(),
                     Map.of("list", list, "listNameDate", listNameDate)
             );
+            resp.setContentType("text/html; charset=utf-8");
             engine.process("projects_list_of_all", simpleContext, resp.getWriter());
 
             resp.getWriter().close();

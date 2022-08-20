@@ -79,6 +79,8 @@ public class AddDeveloperCommand implements Command {
             context.setVariable("salary", salary);
             context.setVariable("industryName", industryName);
             context.setVariable("levelName", levelName);
+
+            resp.setContentType("text/html, charset=utf-8");
             engine.process("developer_add", context, resp.getWriter());
             resp.getWriter().close();
         } else {

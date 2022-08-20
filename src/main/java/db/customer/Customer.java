@@ -6,7 +6,7 @@ import lombok.Data;
 public class Customer {
     private long customerId;
     private String customerName;
-    private int EDRPOU;
+    private int edrpou;
     private String product;
 
 }

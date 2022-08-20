@@ -22,10 +22,10 @@
 </head>
 <body>
 <div>
-    <form action=/hw_servlets/customers method="GET">
+    <form action=/customers method="GET">
     <div class="form-control-string">
         <h1 th:text="${getAllNamesCustomer} + ${customerName}"></h1>
-        <b th:text="'EDRPOU: ' + ${EDRPOU}"></b>
+        <b th:text="'EDRPOU: ' + ${edrpou}"></b>
         <b th:text="'Deputy product: ' + ${customerProduct}"></b>
     </div>
     <div>

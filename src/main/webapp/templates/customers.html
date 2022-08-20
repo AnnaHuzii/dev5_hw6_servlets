@@ -43,13 +43,13 @@
     <h2>You can get such following information from this table</h2>
     <div class="form-retreat">
         <h3>1. List of all customers </h3>
-        <form name="listAllCustomers" action="/hw_servlets/customers/all_customers" method="POST">
+        <form name="listAllCustomers" action="/customers/all_customers" method="POST">
             <input class="submit2" type="submit" name="listAllCustomers_submit" value="Get info">
         </form>
     </div>
     <div class="form-retreat">
         <h3>2. Add customer </h3>
-        <form name="addCustomer" action="/hw_servlets/customers/add" method="POST">
+        <form name="addCustomer" action="/customers/add" method="POST">
 
             <div>
                 <div>
@@ -65,7 +65,7 @@
                             EDRPOU:
                         </div>
                         <div>
-                            <input type="number" name="EDRPOU">
+                            <input type="number" name="edrpou">
                         </div>
                     </div>
                     <div class="form-control-string">
@@ -85,7 +85,7 @@
     </div>
     <div>
         <h4></h4>
-        <form action="/hw_servlets" method="GET">
+        <form action="/" method="GET">
             <input class="submit1"  type="submit" value="To the main menu">
         </form>
     </div>

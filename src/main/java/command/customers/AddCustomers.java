@@ -22,18 +22,18 @@ public class AddCustomers implements Command {
         Context context = new Context();
         String customerName = req.getParameter("customerName");
         String customerProduct = req.getParameter("customerProduct");
-        int EDRPOU = 0;
+        int edrpou = 0;
         try {
-            EDRPOU = Integer.parseInt(req.getParameter("EDRPOU"));
+            edrpou = Integer.parseInt(req.getParameter("edrpou"));
         }catch (Exception e){
             engine.process("error_customer_incorrectly", context, resp.getWriter());
             resp.getWriter().close();
         }
-        if (!customerName.equals("") && EDRPOU != 0) {
-            String getAllNamesCustomer = customerDaoService.addCustomer(customerName, EDRPOU, customerProduct);
+        if (!customerName.equals("") && edrpou != 0) {
+            String getAllNamesCustomer = customerDaoService.addCustomer(customerName, edrpou, customerProduct);
             context.setVariable("getAllNamesCustomer", getAllNamesCustomer);
             context.setVariable("customerName", customerName);
-            context.setVariable("EDRPOU", EDRPOU);
+            context.setVariable("edrpou", edrpou);
             context.setVariable("customerProduct", customerProduct);
             engine.process("customers_add", context, resp.getWriter());
             resp.getWriter().close();

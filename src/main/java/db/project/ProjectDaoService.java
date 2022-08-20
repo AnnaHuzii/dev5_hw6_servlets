@@ -136,15 +136,6 @@ public class ProjectDaoService {
     }
 
 
-    public void getQuantityDevelopers (String name) throws SQLException {
-        getQuantityDevelopersByProjectName.setString(1, name);
-        try (ResultSet rs1 = getQuantityDevelopersByProjectName.executeQuery()) {
-            while (rs1.next()) {
-                System.out.println("\t\tВ даном проекті задіяно " +  rs1.getInt("COUNT(developer_id)") + " розробник(а)");
-            }
-        }
-    }
-
     public float getBudgetByProjectName (String name) throws SQLException {
         float projectCost = 0f;
         getBudgetByProjectName.setString(1, name);

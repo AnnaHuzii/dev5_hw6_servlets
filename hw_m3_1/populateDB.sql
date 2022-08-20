@@ -17,10 +17,10 @@ INSERT INTO companies (name, description) VALUES
 ('Quartz', 'Software for agriculture and utilities');
 
 INSERT INTO customers (name, EDRPOU, product) VALUES
-('Орільський об"єднаний елеватор, ТОВ', '30921733', 'Бухгалтерія елеватора, млина і комбікормового заводу'),
-('Орільський об"єднаний елеватор, ТОВ', '30921733','BAS АГРО. Бухгалтерія елеватора'),
-('Корсунь АФ, СТОВ', '32012939', 'BAS АГРО. Бухгалтерія (сг)'),
-('Агросоюз-РП, ТОВ, с. Мліїв', '35013940', 'Бухгалтерія сільськогосподарського підприємства'),
+('Oryla United Elevator, LLC', '30921733', 'Accounting of the elevator, mill and feed mill'),
+('Oryla United Elevator, LLC', '30921733','BAS AGRO. Elevator accounting'),
+('Korsun AF, STOV', '32012939', 'BAS AGRO. Accounting (Agriculture)'),
+('Agrosoyuz-RP, LLC, with. Mliiv', '35013940', 'Accounting of an agricultural enterprise'),
 ('BI Group - Engineering', '160540301', 'ERP');
 
 INSERT INTO developers (full_name, birth_date, sex, email, skype) VALUES
@@ -31,7 +31,7 @@ INSERT INTO developers (full_name, birth_date, sex, email, skype) VALUES
 ('Huzii Anna', '1984-07-08', 'female', 'anna_guzii@ukr.net', 'anna_guzii'),
 ('Onishchenko Elena', '1990-01-02', 'female', 'onishchenko.l@inagro.com.ua', 'lena.stadnik32');
 
-INSERT INTO project (name, description, company_id, customer_id) VALUES
+INSERT INTO project (start_date, name, description, company_id, customer_id) VALUES
 ('2017-01-04','Kazakhstan BI-Group', 'ERP with enhancements for business management of a construction company', 1, 5),
 ('2016-08-01','UkrAgroCom', 'Program for the UkrAgroCom company', 1, 2),
 ('2021-09-01','KUP Agro', 'Program for integrated management of an agricultural enterprise', 1, 3),
@@ -62,3 +62,21 @@ INSERT INTO projects_developers (project_id, developer_id) VALUES
 (4,1),
 (5,2),
 (5,6);
+
+UPDATE developers SET salary = 5000 WHERE id = 1;
+UPDATE developers SET salary = 1500 WHERE id = 2;
+UPDATE developers SET salary = 2500 WHERE id = 3;
+UPDATE developers SET salary = 2000 WHERE id = 4;
+UPDATE developers SET salary = 2500 WHERE id = 5;
+UPDATE developers SET salary = 1000 WHERE id = 6;
+
+UPDATE project
+SET project.cost = (
+    SELECT SUM(salary)
+    FROM developers
+    WHERE developers.id IN (
+        SELECT PS.developer_id
+        FROM projects_developers AS PS
+        WHERE PS.project_id=project.id
+    )
+);

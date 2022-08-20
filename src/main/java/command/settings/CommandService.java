@@ -28,29 +28,29 @@ public class CommandService {
     public CommandService() {
         commands = new HashMap<>();
 
-        commands.put("GET /hw_servlets", new MainMenuCommand());
-        commands.put("POST /hw_servlets/", new ChooseTableCommand());
+        commands.put("GET /", new MainMenuCommand());
+        commands.put("POST /", new ChooseTableCommand());
 
-        commands.put("GET /hw_servlets/developers", new DevelopersMenuCommand());
-        commands.put("POST /hw_servlets/developers/all_developers", new GetInformationAboutAllDevelopersCommand());
-        commands.put("POST /hw_servlets/developers/developer_info", new GetInformationAboutDeveloperByNameCommand());
-        commands.put("POST /hw_servlets/developers/quantity_java_developers", new QuantityJavaDevelopersCommand());
-        commands.put("POST /hw_servlets/developers/middle_developers", new ListMiddleDevelopersCommand());
-        commands.put("POST /hw_servlets/developers/add", new AddDeveloperCommand());
-        commands.put("POST /hw_servlets/developers/update", new UpdateDeveloperCommand());
-        commands.put("POST /hw_servlets/developers/delete", new DeleteDeveloperCommand());
+        commands.put("GET /developers", new DevelopersMenuCommand());
+        commands.put("POST /developers/all_developers", new GetInformationAboutAllDevelopersCommand());
+        commands.put("POST /developers/developer_info", new GetInformationAboutDeveloperByNameCommand());
+        commands.put("POST /developers/quantity_java_developers", new QuantityJavaDevelopersCommand());
+        commands.put("POST /developers/middle_developers", new ListMiddleDevelopersCommand());
+        commands.put("POST /developers/add", new AddDeveloperCommand());
+        commands.put("POST /developers/update", new UpdateDeveloperCommand());
+        commands.put("POST /developers/delete", new DeleteDeveloperCommand());
 
-        commands.put("GET /hw_servlets/companies", new CompaniesMenuCommand());
-        commands.put("POST /hw_servlets/companies/all_companies", new GetInformationAboutAllCompanies());
-        commands.put("POST /hw_servlets/companies/add", new AddCompanies());
+        commands.put("GET /companies", new CompaniesMenuCommand());
+        commands.put("POST /companies/all_companies", new GetInformationAboutAllCompanies());
+        commands.put("POST /companies/add", new AddCompanies());
 
-        commands.put("GET /hw_servlets/project", new ProjectMenuCommand());
-        commands.put("POST /hw_servlets/project/projects_list_of_all", new ListAllProjectCommand());
-        commands.put("POST /hw_servlets/project/project_all_info_about", new AllInfoAboutProjectCommand());
+        commands.put("GET /project", new ProjectMenuCommand());
+        commands.put("POST /project/projects_list_of_all", new ListAllProjectCommand());
+        commands.put("POST /project/project_all_info_about", new AllInfoAboutProjectCommand());
 
-        commands.put("GET /hw_servlets/customers", new CustomersMenuCommand());
-        commands.put("POST /hw_servlets/customers/all_customers", new GetInformationAboutAllCustomers());
-        commands.put("POST /hw_servlets/customers/add", new AddCustomers());
+        commands.put("GET /customers", new CustomersMenuCommand());
+        commands.put("POST /customers/all_customers", new GetInformationAboutAllCustomers());
+        commands.put("POST /customers/add", new AddCustomers());
 
     }
 

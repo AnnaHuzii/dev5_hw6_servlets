@@ -29,14 +29,14 @@ public class CustomerDaoService {
                 if (rs.getString("name") != null) {
                     customer.setCustomerName(rs.getString("name"));
                 }
-                customer.setEDRPOU(rs.getInt("EDRPOU"));
+                customer.setEdrpou(rs.getInt("edrpou"));
                 customer.setProduct(rs.getString("product"));
                 customers.add(customer);
             }
         }
 
         getAllNamesSt = connection.prepareStatement(
-                " SELECT id, name, EDRPOU, product FROM customers"
+                " SELECT id, name, edrpou, product FROM customers"
         );
         getProjectsNamesSt = connection.prepareStatement(
                 " SELECT project.name FROM customers " +
@@ -62,11 +62,11 @@ public class CustomerDaoService {
             while (rs.next()) {
                 long customerID = rs.getLong("id");
                 String customerName = rs.getString("name");
-                int customerEDRPOU = rs.getInt("EDRPOU");
+                int customerEdrpou = rs.getInt("edrpou");
                 String customerProduct = rs.getString("product");
                 result.add("\t" + customerID + ". "
                         + customerName
-                        + "; EDRPOU - " + customerEDRPOU
+                        + "; EDRPOU - " + customerEdrpou
                         + "; Product - " + customerProduct + ";");
                 result.add("\t\tHe is the customer of the following projects: ");
                 getProjectsNamesSt.setString(1, "%" + customerName + "%");
@@ -81,7 +81,7 @@ public class CustomerDaoService {
         return result.toString();
     }
 
-    public String addCustomer(String newCustomerName, int newCustomerEDRPOU, String newCustomerProduct) throws SQLException {
+    public String addCustomer(String newCustomerName, int newcustomerEdrpou, String newCustomerProduct) throws SQLException {
         long newCustomerId;
         try(ResultSet rs = selectMaxIdSt.executeQuery()) {
             rs.next();
@@ -94,14 +94,14 @@ public class CustomerDaoService {
 
         addCustomerSt.setLong(1, newCustomerId);
         addCustomerSt.setString(2, newCustomerName);
-        addCustomerSt.setInt(3, newCustomerEDRPOU);
+        addCustomerSt.setInt(3, newcustomerEdrpou);
         addCustomerSt.setString(4, newCustomerProduct);
 
         Customer  customer = new Customer();
 
         customer.setCustomerId(newCustomerId);
         customer.setCustomerName(newCustomerName);
-        customer.setEDRPOU(newCustomerEDRPOU);
+        customer.setEdrpou(newcustomerEdrpou);
         customer.setProduct(newCustomerProduct);
 
         addCustomerSt.executeUpdate();

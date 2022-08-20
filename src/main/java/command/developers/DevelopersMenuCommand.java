@@ -12,7 +12,6 @@ public class DevelopersMenuCommand implements Command {
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp, TemplateEngine engine) throws IOException {
         resp.setContentType("text/html, charset=utf-8");
-
         Context context = new Context();
         context.setVariable("table", req.getParameter("table"));
 

@@ -44,11 +44,12 @@ public class AllInfoAboutProjectCommand implements Command {
             // Суму зарплат всіх розробників проекту Quarter
             float projectCost = projectDaoService.getBudgetByProjectName(nameProject);
 
-            resp.setContentType("text/html; charset=utf-8");
             Context simpleContext = new Context(
                     req.getLocale(),
                     Map.of("nameProject", nameProject, "listInfoByName", listInfoByName, "listDeveloper", listDeveloper, "projectCost", projectCost)
             );
+
+            resp.setContentType("text/html; charset=utf-8");
             engine.process("project_all_info_about", simpleContext, resp.getWriter());
             resp.getWriter().close();
         } else {
