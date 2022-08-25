@@ -9,6 +9,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw_m3_1/populateDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/hw_m3_1/populateDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/companies/AddCompanies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/AddCompanies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/companies/CompaniesMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/companies/CompaniesMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/AddCustomers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/customers/CustomersMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/customers/CustomersMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/AddDeveloperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DeleteDeveloperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/DevelopersMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/DevelopersMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/GetInformationAboutDeveloperByNameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/developers/UpdateDeveloperCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/main/ChooseTableCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/main/ChooseTableCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/main/MainMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/main/MainMenuCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/command/project/ProjectMenuCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/command/project/ProjectMenuCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/developer/DeveloperDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/developer/DeveloperDaoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/project/ProjectDaoService.java" afterDir="false" />
     </list>
@@ -73,6 +85,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/AnnaHuzii/study java/hw_m6/hw_servlets",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "33b7b47ec1b9e976b7bd77781544589d"
   }
 }]]></component>
@@ -157,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659884120210</updated>
-      <workItem from="1661446751214" duration="7705000" />
+      <workItem from="1661446751214" duration="7935000" />
     </task>
     <servers />
   </component>
