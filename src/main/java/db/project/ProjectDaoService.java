@@ -151,8 +151,7 @@ return projectCost;
         try (ResultSet rs = getAllNames.executeQuery()) {
 
             while (rs.next()) {
-                StringJoiner list = null;
-                list = new StringJoiner(", ");
+                StringJoiner list = new StringJoiner(", ");
                 Date projectDate = Date.valueOf(LocalDate.parse(rs.getString("start_date")));
                 list.add("Project start date: " + projectDate);
                 String projectName = rs.getString("name");

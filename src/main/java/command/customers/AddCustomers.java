@@ -16,7 +16,7 @@ public class AddCustomers implements Command {
 
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp, TemplateEngine engine) throws IOException, SQLException, ParseException {
-
+        resp.setContentType("text/html; charset=utf-8");
         Storage util = Storage.getInstance();
         CustomerDaoService customerDaoService = new CustomerDaoService(util.getConnection());
         Context context = new Context();

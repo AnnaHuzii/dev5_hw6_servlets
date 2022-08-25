@@ -88,7 +88,7 @@ public class UpdateDeveloperCommand implements Command {
             context.setVariable("industryName", industryName);
             context.setVariable("levelName", levelName);
 
-            resp.setContentType("text/html, charset=utf-8");
+            resp.setContentType("text/html; charset=utf-8");
 
             engine.process("developer_update", context, resp.getWriter());
 

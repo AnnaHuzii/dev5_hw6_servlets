@@ -50,7 +50,7 @@ public class GetInformationAboutDeveloperByNameCommand implements Command {
                 context.setVariable("Skill", SkillsByFullName);
                 context.setVariable("Projects", ProjectsByFullName);
 
-                resp.setContentType("text/html, charset=utf-8");
+                resp.setContentType("text/html; charset=utf-8");
                 engine.process("developer_information", context, resp.getWriter());
                 resp.getWriter().close();
             } else {

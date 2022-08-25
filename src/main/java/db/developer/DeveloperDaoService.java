@@ -274,7 +274,6 @@ public class DeveloperDaoService {
         developer.setSalary(salary);
         developers.add(developer);
         String industryName = industry.getIndustryName();
-
         String lenelName = level.getLevelName();
         getIdSkillByIndustryAndSkillLevel.setString(1, "%" + industryName + "%");
         getIdSkillByIndustryAndSkillLevel.setString(2, "%" + lenelName + "%");

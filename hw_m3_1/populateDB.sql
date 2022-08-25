@@ -16,7 +16,7 @@ INSERT INTO companies (name, description) VALUES
 ('RASK In-AGRO', 'The company implements and maintains IT management and accounting systems for industrial and agricultural enterprises'),
 ('Quartz', 'Software for agriculture and utilities');
 
-INSERT INTO customers (name, EDRPOU, product) VALUES
+INSERT INTO customers (name, edrpou, product) VALUES
 ('Oryla United Elevator, LLC', '30921733', 'Accounting of the elevator, mill and feed mill'),
 ('Oryla United Elevator, LLC', '30921733','BAS AGRO. Elevator accounting'),
 ('Korsun AF, STOV', '32012939', 'BAS AGRO. Accounting (Agriculture)'),

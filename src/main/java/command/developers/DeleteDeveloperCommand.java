@@ -36,7 +36,7 @@ public class DeleteDeveloperCommand implements Command {
             context.setVariable("fullName", fullName);
             context.setVariable("fullName", fullName);
 
-            resp.setContentType("text/html, charset=utf-8");
+            resp.setContentType("text/html; charset=utf-8");
 
             engine.process("developer_delete", context, resp.getWriter());
             resp.getWriter().close();

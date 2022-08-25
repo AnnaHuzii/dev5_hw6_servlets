@@ -14,7 +14,7 @@ public class MainMenuCommand implements Command {
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp, TemplateEngine engine) throws IOException {
 
-        resp.setContentType("text/html, charset=utf-8");
+        resp.setContentType("text/html; charset=utf-8");
 
         Map<String, String[]> parameterMap = req.getParameterMap();
 

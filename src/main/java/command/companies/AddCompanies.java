@@ -12,9 +12,9 @@ import java.sql.SQLException;
 import java.text.ParseException;
 
 public class AddCompanies implements Command {
-
     @Override
     public void process(HttpServletRequest req, HttpServletResponse resp, TemplateEngine engine) throws IOException, SQLException, ParseException {
+        resp.setContentType("text/html; charset=utf-8");
         Storage util = Storage.getInstance();
         CompanyDaoService companyDaoService = new CompanyDaoService(util.getConnection());
         Context context = new Context();
